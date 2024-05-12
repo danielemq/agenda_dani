@@ -15,10 +15,10 @@ function adicionaLinha(){
     const inputNome = document.getElementById('nome');
     const inputDDD = document.getElementById('ddd');
     const inputTelefone = document.getElementById('telefone');
-    const telComDDD = '(' + inputDDD.value + ') ' + inputTelefone.value
     const telefoneAjustado = inputTelefone.value.replace(/\-/g, '');
-
     inputTelefone.value = telefoneAjustado;
+
+    const telComDDD = '(' + inputDDD.value + ') ' + inputTelefone.value
 
     if (nomes.includes(inputNome.value)){
         alert(`O contato ${inputNome.value} já foi inserido.`);
